@@ -2,15 +2,17 @@ package com.adalto.anotao;
 
 public class Produto {
 
-    private int idProduto, idReferencia;
-    private String nomeProduto;
+    private int idProduto, quantidade, idReferencia;
+    private String nomeProduto, preco;
 
     @Override
     public String toString() {
         return "Produto{" +
                 "idProduto=" + idProduto +
+                ", quantidade=" + quantidade +
                 ", idReferencia=" + idReferencia +
                 ", nomeProduto='" + nomeProduto + '\'' +
+                ", preco='" + preco + '\'' +
                 '}';
     }
 
@@ -20,6 +22,14 @@ public class Produto {
 
     public void setIdProduto(int idProduto) {
         this.idProduto = idProduto;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     public int getIdReferencia() {
@@ -36,5 +46,13 @@ public class Produto {
 
     public void setNomeProduto(String nomeProduto) {
         this.nomeProduto = nomeProduto;
+    }
+
+    public String getPreco() {
+        return preco;
+    }
+
+    public void setPreco(String preco) {
+        this.preco = preco;
     }
 }
