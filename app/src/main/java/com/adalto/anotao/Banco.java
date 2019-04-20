@@ -19,6 +19,12 @@ public class Banco extends SQLiteOpenHelper {
                 "  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , " +
                 "  titulo TEXT , " +
                 "  texto TEXT  ) " );
+
+        // Criação da tabela em que serão cadastrados os produtos
+        db.execSQL("CREATE TABLE IF NOT EXISTS produtos ( " +
+                "  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , " +
+                "  nproduto TEXT , " +
+                "  nreferencia INTEGER  ) " ); // nreferen... recebera o id do adapter(item) clicado.
     }
 
     @Override
